@@ -11,15 +11,17 @@ RUN corepack enable && corepack prepare pnpm@11.5.0 --activate
 WORKDIR /app
 
 # Install dependencies first (better layer caching).
-# pnpm-workspace.yaml already lists the two packages that actually need a
-# postinstall script (onlyBuiltDependencies: @swc/core, core-js) — that's
-# enough for a non-interactive install on its own. The DANGEROUSLY_ALLOW_ALL_
-# BUILDS override this used to carry was redundant with that allowlist, and
-# meant any *new* dependency with a postinstall script would run it silently
-# instead of failing the build with ERR_PNPM_IGNORED_BUILDS until someone
-# deliberately added it to the allowlist.
+# pnpm-workspace.yaml already has an onlyBuiltDependencies allowlist
+# (@swc/core, core-js) — but pnpm 11.5.0 still reports both as
+# ERR_PNPM_IGNORED_BUILDS and fails the install despite it (verified live:
+# removing DANGEROUSLY_ALLOW_ALL_BUILDS broke this exact build). Whatever's
+# needed to make the workspace allowlist alone sufficient at this pnpm
+# version — `pnpm approve-builds` run once against a committed
+# .pnpmfile/state, a package.json-level `pnpm.onlyBuiltDependencies` instead
+# of the workspace-level one, or a pnpm version bump — is follow-up work,
+# not this one-line change. Restored the working flag.
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-RUN pnpm install --frozen-lockfile
+RUN PNPM_CONFIG_DANGEROUSLY_ALLOW_ALL_BUILDS=true pnpm install --frozen-lockfile
 
 # Copy the rest and build both locales (de + en)
 COPY . .

@@ -1,0 +1,26 @@
+# Self-hosted / airgapped deployment for OpenEOS Docs.
+#
+# No Traefik, no ACME/Let's Encrypt, no external "frontend" network —
+# publishes the static Docusaurus site directly on a host port. Nothing
+# else to configure: the site has no build-time-baked service URLs.
+#
+# Airgap flow:
+#   1. On a machine with internet access:
+#        docker pull ghcr.io/openeos-project/openeos-docs:latest
+#        docker save -o openeos-docs.tar ghcr.io/openeos-project/openeos-docs:latest
+#   2. Copy the tar to the offline host and load it:
+#        docker load -i openeos-docs.tar
+#   3. docker compose -f docker-compose.airgap.yml up -d
+
+services:
+  docs:
+    image: ${DOCS_IMAGE:-ghcr.io/openeos-project/openeos-docs:latest}
+    container_name: openeos-docs
+    restart: unless-stopped
+    ports:
+      - "3002:80"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3

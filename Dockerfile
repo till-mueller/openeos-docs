@@ -11,10 +11,15 @@ RUN corepack enable && corepack prepare pnpm@11.5.0 --activate
 WORKDIR /app
 
 # Install dependencies first (better layer caching).
-# DANGEROUSLY_ALLOW_ALL_BUILDS skips pnpm's interactive build-script approval
-# gate (ERR_PNPM_IGNORED_BUILDS) for a clean, non-interactive CI install.
+# pnpm-workspace.yaml already lists the two packages that actually need a
+# postinstall script (onlyBuiltDependencies: @swc/core, core-js) — that's
+# enough for a non-interactive install on its own. The DANGEROUSLY_ALLOW_ALL_
+# BUILDS override this used to carry was redundant with that allowlist, and
+# meant any *new* dependency with a postinstall script would run it silently
+# instead of failing the build with ERR_PNPM_IGNORED_BUILDS until someone
+# deliberately added it to the allowlist.
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-RUN PNPM_CONFIG_DANGEROUSLY_ALLOW_ALL_BUILDS=true pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile
 
 # Copy the rest and build both locales (de + en)
 COPY . .

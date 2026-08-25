@@ -44,6 +44,20 @@ Die Screenshots wurden mit Playwright gegen <https://app.openeos.de> erzeugt
 System-Chromium nutzen und die Skripte ausführen; die Ergebnisse anschließend
 nach `static/img/screens/{de,en}/` kopieren.
 
+## Airgapped / Self-Hosted Deployment
+
+For a closed network (no Traefik, no ACME, no public DNS) use `docker-compose.airgap.yml`:
+
+```bash
+docker pull ghcr.io/openeos-project/openeos-docs:latest
+docker save -o openeos-docs.tar ghcr.io/openeos-project/openeos-docs:latest
+# copy openeos-docs.tar to the offline host, then:
+docker load -i openeos-docs.tar
+docker compose -f docker-compose.airgap.yml up -d
+```
+
+Static site, no service URLs baked in — nothing else to configure.
+
 ## Automatisches Deployment
 
 Nach jedem erfolgreichen Image-Build auf `main` aktualisiert ein Deploy-Job den

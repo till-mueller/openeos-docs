@@ -29,7 +29,7 @@ Im Unterbereich **Sicherheit** ändern Sie Ihr Passwort und verwalten weitere Si
 
 ## Organisation
 
-Im Reiter **Organisation** verwalten Sie die Stammdaten und Optionen Ihrer Organisation. Er ist in mehrere Unterbereiche gegliedert: **Allgemein**, **Kontakt**, **Rechnungsadresse**, **Kasse (POS)** und **SumUp**.
+Im Reiter **Organisation** verwalten Sie die Stammdaten und Optionen Ihrer Organisation. Er ist in mehrere Unterbereiche gegliedert: **Allgemein**, **Kontakt**, **Rechnungsadresse**, **Kasse (POS)**, **SumUp**, **TSE** und **DSFinV-K-Export**.
 
 ### Allgemein
 
@@ -75,6 +75,10 @@ Hier steuern Sie das Verhalten der Kasse:
 :::info[Wo bekomme ich die SumUp-Zugangsdaten?]
 API-Key und Merchant Code finden Sie in Ihrem SumUp-Konto (Entwickler-/API-Bereich). Behandeln Sie den API-Key wie ein Passwort und geben Sie ihn nicht weiter.
 :::
+
+### TSE & DSFinV-K-Export
+
+Ist Ihr Verein umsatzsteuerpflichtig, richten Sie unter **TSE** die Technische Sicherheitseinrichtung ein, und laden unter **DSFinV-K-Export** die für eine Betriebsprüfung nötigen Exporte herunter. Details dazu, welchen Export Sie wann brauchen, finden Sie im Kapitel [Finanzamt & TSE](./finanzamt-tse.md).
 
 ## Darstellung und Sprache
 

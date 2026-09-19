@@ -29,7 +29,7 @@ In the **Security** sub-section you change your password and manage further secu
 
 ## Organisation
 
-In the **Organisation** tab you manage your organisation's master data and options. It is divided into several sub-sections: **General**, **Contact**, **Billing address**, **Till (POS)**, and **SumUp**.
+In the **Organisation** tab you manage your organisation's master data and options. It is divided into several sub-sections: **General**, **Contact**, **Billing address**, **Till (POS)**, **SumUp**, **TSE**, and **DSFinV-K export**.
 
 ### General
 
@@ -75,6 +75,10 @@ The **SumUp** integration lets you connect your SumUp account to accept card pay
 :::info[Where do I find my SumUp credentials?]
 Your API key and merchant code are available in your SumUp account (Developer / API section). Treat the API key like a password and do not share it.
 :::
+
+### TSE & DSFinV-K export
+
+If your organisation is liable for VAT, set up the Technical Security Device under **TSE**, and download the exports needed for a tax audit under **DSFinV-K export**. For details on which export you need and when, see [Tax office & TSE](./finanzamt-tse.md).
 
 ## Appearance and language
 

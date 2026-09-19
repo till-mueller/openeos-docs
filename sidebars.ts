@@ -41,7 +41,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Team & Verwaltung',
       collapsed: false,
-      items: ['mitglieder', 'schichtplaene', 'veranstaltungen', 'auswertung'],
+      items: ['mitglieder', 'schichtplaene', 'veranstaltungen', 'auswertung', 'finanzamt-tse'],
     },
     {
       type: 'category',

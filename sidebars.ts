@@ -49,6 +49,17 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: ['einstellungen'],
     },
+    {
+      type: 'category',
+      label: 'Rechtliches',
+      collapsed: false,
+      items: [
+        'legal/verfahrensdokumentation',
+        'legal/avv-template',
+        'legal/toms',
+        'legal/sub-processors',
+      ],
+    },
   ],
 };
 

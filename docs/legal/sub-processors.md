@@ -16,7 +16,7 @@ Dieses Verzeichnis ist Teil des Auftragsverarbeitungsvertrags (Anlage „Sub-Pro
 
 | Auftragsverarbeiter | Zweck | Sitz | Garantien |
 | --- | --- | --- | --- |
-| fiskaly GmbH | Cloud-TSE (KassenSichV) | Nürnberg, DE | AVV |
+| fiskaly GmbH (deutsche Niederlassung: fiskaly Germany GmbH) | Cloud-TSE (KassenSichV) | Wien, AT (fiskaly GmbH; deutsche Niederlassung: fiskaly Germany GmbH, Frankfurt a. M.) – **[Sitz/Rechtseinheit vor Verwendung verifizieren]** | AVV |
 | SumUp Payments Ltd. | Kartenzahlung | Irland | AVV/EU |
 | Stripe Payments Europe Ltd. | Online-Zahlung | Irland | AVV/EU |
 | PayPal (Europe) S.à r.l. et Cie, S.C.A. | Online-Zahlung | Luxemburg | AVV/EU |

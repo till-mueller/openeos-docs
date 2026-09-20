@@ -29,7 +29,7 @@ Vertreten durch: **[ ]**
 
 ## 2. Dauer
 
-Der Vertrag beginnt mit **[ ]** und läuft bis zum Ende des zugrunde liegenden Leistungsvertrags, mindestens jedoch bis **[ ]** . Kündigungs- und Beendigungsfristen folgen dem zugrunde liegenden Vertrag. Abs. Genaueres regeln die Parteien in **[ ]** .
+Der Vertrag beginnt mit **[ ]** und läuft bis zum Ende des zugrunde liegenden Leistungsvertrags, mindestens jedoch bis **[ ]** . Kündigungs- und Beendigungsfristen folgen dem zugrunde liegenden Vertrag. Genaueres regeln die Parteien in **[ ]** .
 
 ## 3. Art, Zweck und Umfang der Verarbeitung
 

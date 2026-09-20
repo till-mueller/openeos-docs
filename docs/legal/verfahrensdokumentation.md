@@ -118,7 +118,7 @@ Die Verarbeitung personenbezogener Daten durch OpenEOS erfolgt nach den Vorgaben
 
 ## 13. § 146a AO – Kassenmeldepflicht (Checkliste für den Betreiber)
 
-Kassen sind dem zuständigen Finanzamt nach § 146a AO i. V. m. der KassenSichV zu melden. Die Meldung erfolgt durch den Betreiber selbst (nicht durch das System). **Dieser Abschnitt ist mit dem zuständigen Finanzamt und der Rechtsberatung abzustimmen.**
+Kassen sind dem zuständigen Finanzamt nach § 146a Abs. 5 AO i. V. m. der (noch nicht erlassenen) Kassenmeldeverordnung zu melden. Die Meldung erfolgt durch den Betreiber selbst (nicht durch das System). **Dieser Abschnitt ist mit dem zuständigen Finanzamt und der Rechtsberatung abzustimmen.**
 
 | Prüfpunkt | Erledigt | Hinweis |
 | --- | --- | --- |
